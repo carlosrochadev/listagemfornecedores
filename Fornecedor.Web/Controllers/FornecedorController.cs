@@ -35,7 +35,7 @@ namespace Fornecedor.Web.Controllers
                     NomeEmpresa = item.Empresa.NomeFantasia,
                     Nome = item.Nome,
                     Telefone = item.Telefone.Replace("|", ","),
-                    DataHoraCadastro = item.DataHoraCadastro.ToLongDateString()
+                    DataHoraCadastro = item.DataHoraCadastro.ToString()
                 };
 
                 model.Add(viewModel);
