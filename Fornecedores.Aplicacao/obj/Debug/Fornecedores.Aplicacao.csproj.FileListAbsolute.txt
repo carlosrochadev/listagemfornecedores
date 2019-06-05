@@ -1,0 +1,9 @@
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Aplicacao\bin\Debug\Fornecedores.Aplicacao.dll
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Aplicacao\bin\Debug\Fornecedores.Aplicacao.pdb
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Aplicacao\bin\Debug\Fornecedores.Dominio.dll
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Aplicacao\bin\Debug\Fornecedores.Dominio.pdb
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Aplicacao\obj\Debug\Fornecedores.Aplicacao.csproj.CoreCompileInputs.cache
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Aplicacao\obj\Debug\Fornecedores.Aplicacao.csproj.CopyComplete
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Aplicacao\obj\Debug\Fornecedores.Aplicacao.dll
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Aplicacao\obj\Debug\Fornecedores.Aplicacao.pdb
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Aplicacao\obj\Debug\Fornecedores.Aplicacao.csprojAssemblyReference.cache

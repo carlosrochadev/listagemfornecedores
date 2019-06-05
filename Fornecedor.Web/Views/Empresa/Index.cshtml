@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Fornecedores.Dominio.Entidades.Empresa>
+
+@{
+    /**/
+
+    ViewBag.Title = "Empresas";
+}
+
+@{int numeroLinha = 1;}
+
+<style>
+    .table-head{
+        background: #1E90FF;
+        color: #fff;
+    }
+
+    .alt{
+        background: #E0FFFF; /*#7CFC00;*/
+    }
+</style>
+
+<h2>Cadastro de empresas</h2>
+
+<p>
+    @Html.ActionLink("Novo", "Novo", null, new { @class = "btn btn-primary" })
+</p>
+
+<table class="table">
+    <tr class="table-head">
+        <th>
+            @Html.DisplayNameFor(model => model.NomeFantasia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CNPJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UF)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr class= @(numeroLinha % 2 == 0 ? "alt" : "")>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeFantasia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CNPJ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UF)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.Id })
+            </td>
+        </tr>
+        numeroLinha++;
+    }
+
+</table>

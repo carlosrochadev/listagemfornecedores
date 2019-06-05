@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Fornecedor.Web.Models.FornecedorViewModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="/Scripts/modernizr-2.8.3.js"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    <link href="~/Content/config-gerais.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="~/Scripts/Fornecedor/Index.js"></script>
+    <script src="~/Scripts/formataDocs.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        body {
+            padding-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="nav-bar navbar-brand">
+                @Html.ActionLink("Listagem de fornecedores", "Index", "Home")
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Empresas", "Index", "Empresa")</li>
+                    <li>@Html.ActionLink("Fornecedores", "Index", "Fornecedor")</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Fornecedores</h2>
+        <p>
+            @Html.ActionLink("Novo", "Novo", null, new { @class = "btn btn-primary" })
+        </p>
+        <div class="pesquisa">
+            <div>
+                <label class="col-md-2">Nome</label>
+                <input id="nome" type="text" />
+            </div>
+            <div>
+                <label class="col-md-2">CPF/CNPJ</label>
+                <input id="cpf-cnpj" type="text" />
+            </div>
+            <div>
+                <label class="col-md-2">Data de cadastro</label>
+                <input id="data-cadastro" type="text" />
+            </div>
+            <div>
+                <button class="btn btn-success" id="btnPesquisar" onclick="javascript:pesquisarFornecedor()">Filtrar</button>
+            </div>
+            
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr class="titulo-tabela">
+                        <th class="tamanho-campos">@Html.DisplayNameFor(model => model.Nome)</th>
+                        <th class="tamanho-campos">@Html.DisplayNameFor(model => model.NomeEmpresa)</th>
+                        <th class="tamanho-campos">@Html.DisplayNameFor(model => model.CPFCNPJ)</th>
+                        <th class="tamanho-campos">@Html.DisplayNameFor(model => model.Telefones)</th>
+                        <th class="tamanho-campos">@Html.DisplayNameFor(model => model.DataHoraCadastro)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@item.Nome</td>
+                        <td>@item.NomeEmpresa</td>
+                        <td>@item.CPFCNPJ</td>
+                        <td>@item.Telefone</td>
+                        <td>@item.DataHoraCadastro</td>
+                    </tr>
+
+                    }
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>

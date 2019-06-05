@@ -1,0 +1,81 @@
+﻿nav {
+    background: #000;
+    height: 50px;
+}
+
+nav a {
+    color: #808080;
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 50px;
+    vertical-align: auto;
+}
+
+nav a:hover {
+    color: #808080;
+    text-decoration: none;
+}
+
+.titulo-tabela {
+    background: #1E90FF;
+    color: #fff;
+}
+
+.alt {
+    background: #E0FFFF; /*#7CFC00;*/
+}
+
+input[type="text"], select, input[type="datetime"] {
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #727171;
+    outline: none;
+}
+
+.formata-linha {
+    padding-top: 10px;
+}
+
+.tamanho-campos{
+    width: 250px;
+}
+
+.botao-adicionar, .botao-remover {
+    height: 20px;
+    width: 20px;
+    color: #fff;
+    border-radius: 100%;
+    text-align: center;
+    padding-top: 2.5px;
+}
+
+.botao-adicionar {
+    background: #0aca08;
+}
+
+.botao-remover {
+    background: #ff0000;
+}
+
+.botao-adicionar:hover, .botao-remover:hover{
+    cursor:pointer;
+}
+
+.pesquisa {
+    background: #F8F8FF;
+    margin-bottom: 10px;
+    padding: 10px 0 10px 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    border: none;
+}
+
+.pesquisa div{
+    margin-bottom: 5px;
+}
+
+#btnPesquisar{
+    margin-left: 15px;
+    width: 100px;
+}

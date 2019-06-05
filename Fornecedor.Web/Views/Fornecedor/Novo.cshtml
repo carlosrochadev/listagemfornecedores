@@ -1,0 +1,126 @@
+﻿@model Fornecedor.Web.Models.FornecedorViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Novo</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    <link href="~/Content/config-gerais.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="~/Scripts/Fornecedor/Novo.js"></script>
+    <script src="~/Scripts/formataDocs.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        body {
+            padding-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="nav-bar navbar-brand">
+                @Html.ActionLink("Listagem de fornecedores", "Index", "Home")
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Empresas", "Index", "Empresa")</li>
+                    <li>@Html.ActionLink("Fornecedores", "Index", "Fornecedor")</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Novo</h2>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div>
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-danger" })
+            </div>
+
+            <div class="formata-linha">
+                @Html.LabelFor(model => model.Nome, new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.Nome)
+                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+            </div>
+            <div class="formata-linha">
+                @Html.LabelFor(model => model.CPFCNPJ, new { @class = "ccontrol-label col-md-2" })
+                @Html.EditorFor(model => model.CPFCNPJ)
+                @Html.ValidationMessageFor(model => model.CPFCNPJ, "", new { @class = "text-danger" })
+            </div>
+            <div class="formata-linha">
+                @Html.LabelFor(model => model.EmpresaId, new { @class = "control-label col-md-2" })
+                @Html.DropDownListFor(model => model.EmpresaId, Model.Empresa)
+                @Html.ValidationMessageFor(model => model.EmpresaId, "", new { @class = "text-danger" })
+            </div>
+            if (string.IsNullOrWhiteSpace(Model.CPFCNPJ))
+            {
+                <div id="pessoaFisica" style="display: none">
+                    <div class="formata-linha">
+                        @Html.LabelFor(model => model.RG, new { @class = "control-label col-md-2" })
+                        @Html.EditorFor(model => model.RG)
+                        @Html.ValidationMessageFor(model => model.RG, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="formata-linha">
+                        @Html.LabelFor(model => model.DataNascimento, new { @class = "control-label col-md-2" })
+                        @Html.EditorFor(model => model.DataNascimento)
+                        @Html.ValidationMessageFor(model => model.DataNascimento, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div id="pessoaFisica" style="display: block">
+                    <div class="formata-linha">
+                        @Html.LabelFor(model => model.RG, new { @class = "control-label col-md-2" })
+                        @Html.EditorFor(model => model.RG)
+                        @Html.ValidationMessageFor(model => model.RG, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="formata-linha">
+                        @Html.LabelFor(model => model.DataNascimento, new { @class = "control-label col-md-2" })
+                        @Html.EditorFor(model => model.DataNascimento)
+                        @Html.ValidationMessageFor(model => model.DataNascimento, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            }
+
+            <div class="formata-linha">
+                @Html.LabelFor(model => model.Telefone, new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model.Telefone)
+                <span class="glyphicon glyphicon-plus botao-adicionar"></span>
+                @Html.ValidationMessageFor(model => model.EmpresaId, "", new { @class = "text-danger" })
+            </div>
+        }
+
+        @{ int indice = 1; }
+        <div>
+            <hr />
+            <table id="lista-telefones" style="margin-left: 15px;">
+                <thead>
+                    <tr style="border-bottom: 1px solid #0094ff">
+                        <th>Lista de telefones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model.Telefones)
+                    {
+                        <tr><td id= indice> @item <span id= @indice class="glyphicon glyphicon-remove botao-remover" onclick="removerTelefone(this)"></span></td></tr>
+                        indice++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿@model Fornecedores.Dominio.Entidades.Empresa
+
+@{
+
+    ViewBag.Title = "Novo";
+}
+<link href="~/Content/config-gerais.css" rel="stylesheet" />
+
+<h2>Novo</h2>
+
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div>
+        <input type="submit" value="Salvar" class="btn btn-primary" />
+        @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-danger" })
+    </div>
+
+    <div class="formata-linha">
+        @Html.LabelFor(model => model.NomeFantasia, new { @class = "control-label col-md-2" })
+        @Html.EditorFor(model => model.NomeFantasia)
+        @Html.ValidationMessageFor(model => model.NomeFantasia, "", new { @class = "text-danger" })
+    </div>
+    <div class="formata-linha">
+        @Html.LabelFor(model => model.CNPJ, new { @class = "ccontrol-label col-md-2" })
+        @Html.EditorFor(model => model.CNPJ)
+        @Html.ValidationMessageFor(model => model.CNPJ, "", new { @class = "text-danger" })
+    </div>
+    <div class="formata-linha">
+        @Html.LabelFor(model => model.UF, new { @class = "control-label col-md-2" })
+        @Html.EditorFor(model => model.UF)
+        @Html.ValidationMessageFor(model => model.UF, "", new { @class = "text-danger" })
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/Empresa/novo.js")
+    @Scripts.Render("~/Scripts/formataDocs.js")
+}

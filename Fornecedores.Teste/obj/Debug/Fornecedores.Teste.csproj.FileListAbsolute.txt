@@ -1,0 +1,14 @@
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\bin\Debug\Fornecedores.Teste.dll
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\bin\Debug\Fornecedores.Teste.pdb
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\obj\Debug\Fornecedores.Teste.csprojAssemblyReference.cache
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\obj\Debug\Fornecedores.Teste.csproj.CoreCompileInputs.cache
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\obj\Debug\Fornecedores.Teste.csproj.CopyComplete
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\obj\Debug\Fornecedores.Teste.dll
+C:\Users\carlo\source\repos\Fornecedores\Fornecedores.Teste\obj\Debug\Fornecedores.Teste.pdb
